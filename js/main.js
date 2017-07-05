@@ -55,3 +55,22 @@ $(document).ready(function(){
 		$('.chapter'+index).toggleClass('active');
 	});
 });
+
+
+
+// desktop
+
+jQuery(document).ready(function($) {
+	console.log('sds');
+	$('.card').click(function(event) {
+			var index=$(this).index();
+			console.log(index);
+			$('.subchapter-tabs>div').removeClass('active');
+			$('.subchapter-tabs>div').eq(index).addClass('active');
+		    $('.subchapter-tabs').addClass('inview');
+		    $('.subchapter-cards').fadeOut('fast', function() {
+
+		    $('.text').eq(index).removeClass('novisible').addClass('block-display').addClass('zoomIn animated');	
+	    });
+	});
+});
